@@ -1,5 +1,7 @@
+import SidebarCOMP from "./SidebarCOMP"
+
 export default function App() {
   return (
-    <h1 className="underline font-bold">Testing</h1>
+    <SidebarCOMP />
   )
 }
