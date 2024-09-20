@@ -1,3 +1,5 @@
+import GithubIcon from "./assets/icons/github.svg"
+
 export default function SidebarCOMP({ activeItem, setActiveItem }) {
     const handleClick = (item) => {
         setActiveItem(item);
@@ -28,6 +30,10 @@ export default function SidebarCOMP({ activeItem, setActiveItem }) {
                     </li>
                 </ul>
             </section>
+            <hr></hr>
+            <div className="flex flex-row gap-3 items-center">
+                <p>v1.0.0 |</p> <a href="https://github.com/SyazanieAmirin/portfolio-syazanie" target="_blank"><img src={GithubIcon} className="h-6 w-6" /></a>
+            </div>
         </aside>
     );
 }
