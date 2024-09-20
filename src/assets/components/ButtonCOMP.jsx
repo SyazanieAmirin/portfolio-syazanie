@@ -1,9 +1,17 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export default function ButtonCOMP({ text, size, width, onClick, ariaLabel, type }) {
+/*
+    NOTE
+    This is ButtonLinkCOMP. NOT ButtonCOMP. This is for buttons that have a link. It can use onClick but it is better if use ButtonCOMP for that. Unless if you need to trigger something AND go to other page.
+*/
+
+export default function ButtonCOMP({ text, size, width, onClick, ariaLabel, link, typeLink, isDownloadable }) {
 
     const [buttonSize, setButtonSize] = useState();
     const [buttonWidth, setButtonWidth] = useState();
+    const [linkType, setLinkType] = useState();
+    const [isDownload, setIsDownload] = useState(isDownloadable);
 
     useEffect(() => {
         if (size === "sm") {
@@ -52,19 +60,37 @@ export default function ButtonCOMP({ text, size, width, onClick, ariaLabel, type
             setButtonWidth("w-full");
         }
 
-        // Default type is button
-        if (!type) {
-            type = "button";
+        if (typeLink === "new tab") {
+            setLinkType("_blank");
+        } else {
+            setLinkType("_self");
         }
 
-    }, [size, width, type]);
+        if (isDownloadable) {
+            setIsDownload(true);
+        } else {
+            setIsDownload(false);
+        }
+
+    }, [size, width, typeLink, isDownloadable]);
 
     return (
-        <button className={`bg-black rounded-lg text-white font-bold flex items-center justify-center transition-all hover:bg-btn-bg-color-hover ${buttonSize} ${buttonWidth}`} onClick={onClick}
-            aria-label={ariaLabel}
-            type={type}
-        >
-            {text}
-        </button>
+        isDownload ? (
+            <a href={link}
+                className={`bg-white rounded-lg text-black font-bold flex items-center justify-center transition-all hover:opacity-70 text-center ${buttonSize} ${buttonWidth}`}
+                onClick={onClick}
+                aria-label={ariaLabel}
+                download>
+                {text}
+            </a>
+        ) : (
+            <Link to={link}
+                className={`bg-white rounded-lg text-black font-bold flex items-center justify-center transition-all hover:opacity-70 text-center ${buttonSize} ${buttonWidth}`}
+                onClick={onClick}
+                aria-label={ariaLabel}
+                target={linkType}>
+                {text}
+            </Link>
+        )
     );
 }
