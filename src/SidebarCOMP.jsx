@@ -32,7 +32,7 @@ export default function SidebarCOMP({ activeItem, setActiveItem }) {
             </section>
             <hr></hr>
             <div className="flex flex-row gap-3 items-center">
-                <p>v1.0.2 |</p> <a href="https://github.com/SyazanieAmirin/portfolio-syazanie" target="_blank"><img src={GithubIcon} className="h-6 w-6" /></a>
+                <p>v1.0.3 |</p> <a href="https://github.com/SyazanieAmirin/portfolio-syazanie" target="_blank"><img src={GithubIcon} className="h-6 w-6" /></a>
             </div>
         </aside>
     );
