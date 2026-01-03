@@ -10,7 +10,14 @@ export default function Clients() {
                     </a>
                     <h1 className='font-bold text-center'>Tahfiz Nurul<br></br>Insaniah</h1>
                 </div>
+                <div className='flex flex-col gap-3 justify-center items-center'>
+                    <a className="bg-[#1D1D1D] rounded-md flex items-center w-12 h-12 md:w-24 md:h-20" href="https://evori-lune.vercel.app/" target='_blank'>
+                        <img src={LogoTahfizNurulInsaniah} alt="Logo Tahfiz Nurul Insaniah Icon" className="w-7 h-9 md:w-12 md:h-16 mx-auto" />
+                    </a>
+                    <h1 className='font-bold text-center'>Evori<br></br>Lune</h1>
+                </div>
             </div>
+
         </main>
     )
 }
