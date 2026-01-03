@@ -30,7 +30,22 @@ export default function Skills() {
                     <h1>3D Design</h1>
                 </div>
                 <div className="rounded-full bg-[#1e1e1e] px-5 py-1">
-                    <h1>Figma</h1>
+                    <h1>PowerBI</h1>
+                </div>
+                <div className="rounded-full bg-[#1e1e1e] px-5 py-1">
+                    <h1>SSIS</h1>
+                </div>
+                <div className="rounded-full bg-[#1e1e1e] px-5 py-1">
+                    <h1>Data Engineering</h1>
+                </div>
+                <div className="rounded-full bg-[#1e1e1e] px-5 py-1">
+                    <h1>Data Analyst</h1>
+                </div>
+                <div className="rounded-full bg-[#1e1e1e] px-5 py-1">
+                    <h1>SQL</h1>
+                </div>
+                <div className="rounded-full bg-[#1e1e1e] px-5 py-1">
+                    <h1>PostgreSQL</h1>
                 </div>
             </div>
         </div>
